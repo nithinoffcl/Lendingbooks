@@ -1,0 +1,394 @@
+{% load i18n %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+     <style>
+
+
+   @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+   @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
+
+   righta-side .dir-link {
+     margin: 5px 0;
+     padding: 0;
+     position : "top:450px;left:1000px";
+   }
+
+   .port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+body {
+  font-family:  'Nanum Gothic' 'Roboto Slab' san-sarif;
+}
+
+   .col-item {
+     border: 1px solid #E1E1E1;
+     background: #FFF;
+     margin-bottom:12px;
+   }
+   .col-item .options {
+     position:absolute;
+     top:6px;
+     right:22px;
+   }
+   .col-item .photo {
+     overflow: hidden;
+   }
+   .col-item .photo .options {
+     display:none;
+   .col-item .photo img {
+     margin: 0 auto;
+     width: 100%;
+   }
+
+   .col-item .options-cart {
+   }
+     position:absolute;
+     left:22px;
+     top:6px;
+     display:none;
+   }
+   .col-item .photo:hover .options,
+   .col-item .photo:hover .options-cart {
+     display:block;
+     -webkit-animation: fadeIn .5s ease;
+     -moz-animation: fadeIn .5s ease;
+     -ms-animation: fadeIn .5s ease;
+     -o-animation: fadeIn .5s ease;
+     animation: fadeIn .5s ease;
+   }
+   .col-item .options-cart-round {
+     position:absolute;
+     left:42%;
+     top:22%;
+     display:none;
+   }
+   .col-item .options-cart-round button {
+     border-radius: 50%;
+     padding:14px 16px;
+
+   }
+   .col-item .options-cart-round button .fa {
+     font-size:22px;
+   }
+   .col-item .photo:hover .options-cart-round {
+     display:block;
+     -webkit-animation: fadeInDown .5s ease;
+     -moz-animation: fadeInDown .5s ease;
+     -ms-animation: fadeInDown .5s ease;
+     -o-animation: fadeInDown .5s ease;
+     animation: fadeInDown .5s ease;
+   }
+   .col-item .info {
+     padding: 10px;
+     margin-top: 1px;
+   }
+   .col-item .price-details {
+     width: 100%;
+     margin-top: 5px;
+   }
+   .col-item .price-details h1 {
+     font-size: 14px;
+     line-height: 20px;
+     margin: 0;
+     float:left;
+   }
+   .col-item .price-details .details {
+     margin-bottom: 0px;
+     font-size:12px;
+   }
+   .col-item .price-details span {
+     float:right;
+   }
+   .col-item .price-details .price-new {
+     font-size:16px;
+   }
+   .col-item .price-details .price-old {
+     font-size:18px;
+     text-decoration:line-through;
+   }
+   .col-item .separator {
+     border-top: 1px solid #E1E1E1;
+   }
+
+   .col-item .clear-left {
+     clear: left;
+   }
+   .col-item .separator a {
+     text-decoration:none;
+   }
+   .col-item .separator p {
+     margin-bottom: 0;
+     margin-top: 6px;
+     text-align: center;
+   }
+
+   .col-item .separator p i {
+     margin-right: 5px;
+   }
+   .col-item .btn-add {
+     width: 60%;
+     float: left;
+   }
+   .col-item .btn-add a {
+     display:inline-block !important;
+   }
+   .col-item .btn-add {
+     border-right: 1px solid #E1E1E1;
+   }
+   .col-item .btn-details {
+     width: 40%;
+     float: left;
+     padding-left: 10px;
+   }
+   .col-item .btn-details a {
+     display:inline-block !important;
+   }
+   .col-item .btn-details a:first-child {
+     margin-right:12px;
+   }
+.controls
+{
+    margin-top: 20px;
+}
+
+.container-img-books > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-grid-row {
+  grid-row = 1 / 3;
+}
+
+.container-img-books  {
+
+    display: grid;
+    grid-template-columns: 2fr repeat(6,4fr);
+    grid-template-rows: 50px 50px;
+    grid-auto-rows: 100px;
+    grid-gap : 5px;
+    grid-template-areas:
+
+
+}
+
+.container-img-books > div:nth-child(1n) {
+  background-color: #96ceb4;
+}
+
+.container-img-books > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container-img-books> div:nth-child(2n) {
+      background-color: #ff6f69;
+}
+
+.container-img-books > div:nth-child(4n) {
+      background-color: #ffcc5c;
+}
+
+     * {box-sizing: border-box;}
+     body {font-family: Verdana, sans-serif;}
+     .mySlides {display: none;}
+     img {vertical-align: middle;}
+
+     .slideshow-container {
+       max-width: 1000px;
+       position: relative;
+       margin: auto;
+     }
+
+     .text {
+       color: #f2f2f2;
+       font-size: 15px;
+       padding: 8px 12px;
+       position: absolute;
+       bottom: 8px;
+       width: 100%;
+       text-align: center;
+     }
+
+     * {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+
+     .active {
+       background-color: #717171;
+     }
+
+     /* Fading animation */
+     .fade {
+       -webkit-animation-name: fade;
+       -webkit-animation-duration: 30s;
+       animation-name: fade;
+       animation-duration: 2s;
+     }
+
+     @-webkit-keyframes fade {
+       from {opacity: .4}
+       to {opacity: 1}
+     }
+
+     @keyframes fade {
+       from {opacity: .4}
+       to {opacity: 1}
+     }
+
+     /* On smaller screens, decrease text size */
+     @media only screen and (max-width: 300px) {
+       .text {font-size: 11px}
+     }
+
+     @media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}-
+     .product_view .modal-dialog{max-width: 200px; width: 100%;}
+
+     .pre-cost{text-decoration: line-through; color: #a5a5a5;}
+
+     .space-ten{padding: 10px 0;}
+     </style>
+
+     <script>
+     $(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+     </script>
+   </head>
+    <body>
+      <nav class="navbar navbar-inverse" role="navigation" style = "margin-bottom: 0px;">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Name</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="navbar-collapse in" id="bs-example-navbar-collapse-1" style="height: auto;">
+
+        <div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="query" style = "box-sizing: border-box;width:300px;">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret" style="border-left-width: 5px;"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Orders</a></li>
+              <li><a href="#">Rewards</a></li>
+              <li><a href="#">Notifications</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Return Books</a></li>
+              <li><a href="#">Customer care</a></li>
+              <li><a href="#">Track Order</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <br>
+    {% if user %}
+    <h1 style = "margin-left: 100px;">Welcome {{ user.username }}, hope you are having a good day!!</h1>
+    {% endif %}
+
+<div class = "container">
+    <div class = "page-header">
+    </div>
+      <div class="row"style = "padding-left: 100px; margin-left: 100px;">
+        {% for id,url in data1.items %}
+          <div class="col-md-3">
+                <div class="thumbnail">
+                  <img src= "{{ url }}" alt="" class="img-responsive"style = "width:200px;height:200px;">
+                  <div class="caption">
+                    <h4 class="pull-right">100.00</h4>
+                    <h4><a href="#">Product {{ id }}</a></h4>
+                    <p>Product Description...</p>
+                    <a href="#"><p style = "text-align:center"></p></a>
+                  </div>
+                  <div class="space-ten"></div>
+                  <div class="btn-ground text-center">
+                      <a href = "/requestconfirmation/{{ id }}/" ><button type="button" class="btn btn-primary" id = "{{ id }}" style = "margin-right:30px;"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Buy Now</button></a>
+                  </div>
+                  <div class="space-ten"></div>
+                </div>
+              </div>
+            {% endfor %}
+      </div>
+  </div>
+
+  <div class = "container">
+        <div class="row"style = "padding-left: 100px; margin-left: 100px;">
+          {% for id,url in data2.items %}
+            <div class="col-md-3">
+                  <div class="thumbnail">
+                    <img src= "{{ url }}" alt="" class="img-responsive"style = "width:200px;height:200px;">
+                    <div class="caption">
+                      <h4 class="pull-right">100.00</h4>
+                      <h4><a href="#">Product {{ id }}</a></h4>
+                      <p>Product Description...</p>
+                      <a href="#"><p style = "text-align:center"></p>Minimum 40% off</a>
+                    </div>
+                    <div class="space-ten"></div>
+                    <div class="btn-ground text-center">
+                        <a href = "/requestconfirmation/{{ id }}/"><button type="button" class="btn btn-primary" id = "{{ id }}" style = "margin-right:30px;"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Buy Now</button></a>
+                    </div>
+                    <div class="space-ten"></div>
+                  </div>
+                </div>
+              {% endfor %}
+        </div>
+    </div>
+
+
+</body>
+</html>

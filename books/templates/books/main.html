@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+</head>
+
+   <style>
+
+   @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css")
+   .row {
+     display: flex;
+   }
+
+   .column {
+     flex: 33.33%;
+     padding: 5px;
+   }
+
+   .btn-success:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e114";
+    float: right;
+    margin-left: 15px;
+  }
+  /* Icon when the collapsible content is hidden */
+  .btn.collapsed:after {
+    content: "\e080";
+
+  }
+
+  .btn-access:hover {
+    background-color: #3cb371;
+}
+
+.img-thumbnail {
+    border: 0 none;
+    box-shadow: none;
+}
+
+.p1 {
+  color : dodgerblue;
+    margin-bottom: 0px;
+}
+
+.p2 {
+    font-size : 10px;
+}
+
+.card {
+    border: 0 none;
+    box-shadow: none;
+}
+
+.navbar {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.form-control {
+
+    width: 270px;
+
+}
+
+#inputdefault {
+
+    margin-top: 10px;
+
+}
+
+
+ </style>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Brand Name</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span> My Account <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><span class="glyphicon glyphicon-usd"></span> Validity </a>
+      </li>
+    </ul>
+
+    <div class="form-group">
+      <input class="form-control" id="inputdefault" type="text">
+    </div>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    <button class="btn btn-primary" style = "margin-left:10px;">Logout <span class="glyphicon glyphicon-log-out"></span></button>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="column">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Ebooks/2018-02/All_deals/new_1097623_750x375_gps_cn_zjiahong._CB486697321_.jpg" alt="" style="width:100%;" >
+  </div>
+  <div class="column">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Ebooks/2018-04/Acad/1109349_ebooks_750_JEE._CB1198675309_.jpg" alt="" style="width:100%;">
+  </div>
+  <div class="column">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Ebooks/2018-04/1111207_1024x512_gps_cn._CB497561262_.jpg" alt="" style="width:100%;">
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+
+  <div class = "container">
+  <h1 class = "header">Our Top Sellers</h1>
+  <hr>
+  <br>
+  <div class = "row">
+    <div class = "col-md-3">
+ <div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51EQN1RlUIL._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Engineering Mathematics</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+
+    <div class = "col-md-3">
+      <div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51TX+XZ2ZoL._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Engineering Chemistry</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+<div class = "col-md-3">
+  <div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51yC0ZBWVWL._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Engineering Physics</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+</div>
+</div>
+</div>
+    <div class = "col-md-3">
+<div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51E75M0Rm5L._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Discrete Mathematics</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h1>Related to items you've viewed</h1>
+  <hr>
+  <br>
+
+  <div class = "container">
+<div class = "row">
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51l8MktcWaL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+      <p href="#" class ="text-center p1">Basic Electrical Engineering</p>
+      <p class = "text-center p2">by Dharma Raj Cheruku</p>
+      <p class="text-center text-danger">Rs.240.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+  </div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/517l-anekwL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Fundamentals of Digital Circuits</p>
+       <p class = "text-center p2">by Pruthviraja L & B G Kumara</p>
+       <p class="text-center text-danger">Rs.135.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51zSZOna7eL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Engineering Mathematics</p>
+       <p class = "text-center p2">by Oyvind Nydal Dahl</p>
+       <p class="text-center text-danger">Rs.275.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51ezuyV-BtL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Engineering Management</p>
+       <p class = "text-center p2">by Devraj Singh, Jitendra Kumar</p>
+       <p class="text-center text-danger">Rs.75.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51ihwS5b3cL._AC_US218_FMwebp_QL70_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Core Python Programming</p>
+       <p class = "text-center p2">by Manaullah Abid</p>
+       <p class="text-center text-danger">Rs.90.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/41GB9b7kwZL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Foundation of Information Technology</p>
+       <p class = "text-center p2">by Mladen Saric</p>
+       <p class="text-center text-danger">Rs.130.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+
+<div class = "container">
+<div class = "row">
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/51n4zVdS6OL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+    <p href="#" class ="text-center p1">Engineering Mechanics</p>
+    <p class = "text-center p2">by Christofer Larsson</p>
+    <p class="text-center text-danger">Rs.145.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/51X1Su2FRuL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Applied Mechanics</p>
+     <p class = "text-center p2">by Thomas Reddy</p>
+     <p class="text-center text-danger">Rs.125.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/41B0IbKWvvL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Production Technology</p>
+       <p class = "text-center p2">by Paul White</p>
+       <p class="text-center text-danger">Rs.90.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/518JoxWHDjL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Electric Machines</p>
+     <p class = "text-center p2">by S. Srinivasan</p>
+     <p class="text-center text-danger">Rs.265.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/51+4NnLvvYL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Design Patterns</p>
+     <p class = "text-center p2">by Prashobh karunakaran</p>
+     <p class="text-center text-danger">Rs.175.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/41nwVKIa3iL._SL218_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU31_AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Data Warehousing</p>
+     <p class = "text-center p2">by Marco Catanossi</p>
+     <p class="text-center text-danger">Rs.210.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<h1>You May Also Like</h1>
+<hr>
+<br>
+
+    <div class = "row">
+    <div class = "col-md-3">
+ <div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51kMvgdNg9L._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Engineering Mathematics</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+    </div>
+    </div>
+    <div class = "col-md-3">
+ <div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/513o63P7zyL._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">A Book of Biotechnology</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+    <div class = "col-md-3">
+<div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51W2CO0GaGL._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Theory of Machines</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+    <div class = "col-md-3">
+<div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51kMvgdNg9L._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Digital Signal Processing</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+</div>
+  <br>
+  <br>
+  <h1>Computer Science and Engineering</h1>
+  <hr>
+  <br>
+
+  <div class = "container">
+<div class = "row">
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51cK3BbywbL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+      <p class ="text-center p1">Let Us C++</p>
+      <p class = "text-center p2">by shoken</p>
+      <p class="text-center text-danger">Rs.90.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+  </div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/41K2Q3JNm6L._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Java Programming</p>
+       <p class = "text-center p2">by Trevor Linsley</p>
+       <p class="text-center text-danger">Rs.180.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51-mR0lj5+L._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Python Programming</p>
+       <p class = "text-center p2">by Christopher Kitcher</p>
+       <p class="text-center text-danger">Rs.210.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/41+pJNrGujL._SL218_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU31_AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Algorithms</p>
+       <p class = "text-center p2">by Neil Sclater</p>
+       <p class="text-center text-danger">Rs.155.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51RucbMZqDL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">MongoDB</p>
+       <p class = "text-center p2">by N. Altawell</p>
+       <p class="text-center text-danger">Rs.220.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51xOKQpByqL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Distributed Systems</p>
+      <p class = " text-center p2">by Rohit Khurana</p>
+      <p class="text-center text-danger">Rs.160.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<h1>Mechanical Engineering</h1>
+<hr>
+<br>
+
+<div class = "container">
+<div class = "row">
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/31wCP1BmcvL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+      <p class ="text-center p1">TextBook of Engineering Drawing</p>
+      <p class = "text-center p2">by Supriyo Datta</p>
+      <p class="text-center text-danger">Rs.135.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+  </div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/414XRWXqXhL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Basics of Mechanical Engineering</p>
+       <p class = "text-center p2">by K.K. Mishra</p>
+       <p class="text-center text-danger">Rs.160.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51Qx0lQ498L._AC_UL170_SR204,170_FMwebp_QL70_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Objective Mechanical Engineering</p>
+       <p class = "text-center p2">by Arshad Iqbal</p>
+       <p class="text-center text-danger">Rs.135.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51SxcUXg3-L._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Objective Mechanical Engineering</p>
+       <p class = "text-center p2">by Neil Sclater</p>
+       <p class="text-center text-danger">Rs.120.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51PB9qmNc2L._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Introduction to Engineering Graphics</p>
+       <p class = "text-center p2">by N. Altawell</p>
+       <p class="text-center text-danger">Rs.105.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51hLpxpBDyL._SL218_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU31_AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Theory of Computation</p>
+       <p class = "text-center p2">by Steven W. Blume</p>
+       <p class="text-center text-danger">Rs.200.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<h1>Other Books You Might be Interested</h1>
+<hr>
+<br>
+
+
+    <div class = "row">
+    <div class = "col-md-3">
+<div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51DpMmjhGGL._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Control Systems and Engineering</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+    <div class = "col-md-3">
+<div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51L-JaikG7L._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Computer Networking</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+    <div class = "col-md-3">
+<div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/41QP35nDAbL._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Internet and Java Programming</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+    <div class = "col-md-3">
+<div class="card text-center" style="width: 20rem;">
+  <img class="card-img-top" src="https://images-eu.ssl-images-amazon.com/images/I/51d6DRUz8XL._AC_US218_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">Engineering Mechanics</h2>
+    <p class="card-text">The description of the book is shown here</p>
+    <a href="#" class="btn btn-primary">Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
+    <a href="#" class="btn btn-primary">View More <span class="glyphicon glyphicon-filter"></span></a>
+  </div>
+</div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h1>Books in Half-Price</h1>
+  <hr>
+  <br>
+
+  <div class = "container">
+<div class = "row">
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51mZO2vVLbL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+      <p href="#" class ="text-center p1">Design and Manufacturing</p>
+      <p class = "text-center p2">by Dan Chiras</p>
+      <p class="text-center text-danger">Rs.190.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+  </div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/41EDZh3QFIL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Heat and Mass Transfer</p>
+         <p class = "text-center p2">by Vyacheslav Romanov</p>
+         <p class="text-center text-danger">Rs.280.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/41wMX0w2j3L._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Wireless Communications</p>
+         <p class = "text-center p2">by Peter Jamieson</p>
+         <p class="text-center text-danger">Rs.115.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51I18DPaksL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Basic Civil Engineering</p>
+       <p class = "text-center p2">by William A. Young</p>
+       <p class="text-center text-danger">Rs.130.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/51DBDf-LHfL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Material Science and Engineering</p>
+       <p class = "text-center p2">by Josh Gregory</p>
+       <p class="text-center text-danger">Rs.190.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+<div class = "col-md-2">
+  <div class = "thumbnail">
+  <img src = "https://images-eu.ssl-images-amazon.com/images/I/510Y+2GrnCL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+  <div class="caption">
+       <p class ="text-center p1">Production Technology</p>
+       <p class = "text-center p2">by Christopher Kitcher</p>
+       <p class="text-center text-danger">Rs.180.00<span class="glyphicon glyphicon-tag"></span></p>
+     </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<h1>Popular among the Students</h1>
+<hr>
+<br>
+
+<div class = "container">
+<div class = "row">
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/51urU2EgmwL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+    <p href="#" class ="text-center p1">Signals and Systems</p>
+    <p class = "text-center p2">by Bishnu P. Pal</p>
+    <p class="text-center text-danger">Rs.135.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/51sD5rqvOdL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Chemical Engineering Design</p>
+     <p class = "text-center p2">by Thomas Bauer</p>
+     <p class="text-center text-danger">Rs.100.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/51wU4Q9X4ML._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Advanced Thermodynamics</p>
+     <p class = "text-center p2">by John O'Malley</p>
+     <p class="text-center text-danger">Rs.185.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/41-hC+0w6-L._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Agile Software Development</p>
+     <p class = "text-center p2">by Steven L. Kinney</p>
+     <p class="text-center text-danger">Rs.175.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/415COl9ynsL._AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Gear Motor Handbook</p>
+     <p class = "text-center p2">by John Sanger</p>
+     <p class="text-center text-danger">Rs.190.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+<div class = "col-md-2">
+<div class = "thumbnail">
+<img src = "https://images-eu.ssl-images-amazon.com/images/I/51MhUdaduIL._SL218_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU31_AC_US218_.jpg" alt = "img" style = "width:130px;height:160px;">
+<div class="caption">
+     <p class ="text-center p1">Data Center Handbook</p>
+     <p class = "text-center p2">by R A Ashen</p>
+     <p class="text-center text-danger">Rs.140.00<span class="glyphicon glyphicon-tag"></span></p>
+   </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<hr>
+
+<div class="column">
+  <img src="https://images-na.ssl-images-amazon.com/images/G/31/img16/Ebooks/2016-11/KUnewstore/05-Desktop_KU-SignUp_CG_BookShelf.jpg" alt="" style="width:100%;" >
+</div>
+<br>
+<br>
+
+
+
+
+ <div class = "jumbotron">
+ <h2>You May Also Like..</h2>
+ </div>
+<hr>
+<div class="row">
+  <div class = "col-md-2">
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="https://images-eu.ssl-images-amazon.com/images/I/51HOm18n8qL._SL218_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU31_AC_US218_.jpg">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/51HOm18n8qL._SL218_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU31_AC_US218_.jpg" alt="Lights">
+      </a>
+    </div>
+  </div>
+  <div class = "col-md-6">
+    <a href = "#">Aerospace Engineering:by Knowledge flow</a>
+    <br>
+    <small>by Joseph Murphy</small>
+    <br>
+    <mark class = "text-danger">Rs.150.00</mark>
+    <br>
+    <br>
+    <button type = "button" class = "btn btn-success btn-lg collapsed" data-toggle="collapse" data-target="#demo1">Show More...</button>
+    <div id="demo1" class="collapse">
+      The detailed description of the book is shown here..
+    </div>
+    <br>
+    <br>
+    <button  type="button" class="btn btn-lg btn-primary">
+    <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+    </button>
+    <button  type="button" class="btn btn-lg btn-dark">
+    <span class="glyphicon glyphicon-tag">Buy Now</span>
+    </button>
+    <br>
+    <span class="badge badge-warning">15 </span><small> People have bought this book</small>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class = "col-md-2">
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="https://images-eu.ssl-images-amazon.com/images/I/51-b9DGqLOL._SL218_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU31_AC_US218_.jpg">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/51-b9DGqLOL._SL218_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU31_AC_US218_.jpg" alt="Lights">
+      </a>
+    </div>
+  </div>
+  <div class = "col-md-6">
+    <a href = "#">Power System Engineering</a>
+    <br>
+    <small>by Kothari, D and Nagrath</small>
+    <br>
+    <mark class = "text-danger">Rs.129.00</mark>
+    <br>
+    <br>
+    <button type = "button" class = "btn btn-success btn-lg" data-toggle="collapse" data-target="#demo2">Show More...</button>
+    <div id="demo2" class="collapse">
+      The detailed description of the book is shown here..
+    </div>
+    <br>
+    <br>
+    <button type="button" class="btn btn-lg btn-primary">
+    <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+    </button>
+    <button  type="button" class="btn btn-lg btn-dark"  background-color = "tomato">
+    <span class="glyphicon glyphicon-tag">Buy Now</span>
+    </button>
+    <br>
+    <span class="badge badge-warning">10 </span><small> People have bought this book</small>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class = "col-md-2">
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="https://images-eu.ssl-images-amazon.com/images/I/51AzAWrkQWL._AC_US218_.jpg">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/51AzAWrkQWL._AC_US218_.jpg" alt="Lights">
+      </a>
+    </div>
+  </div>
+  <div class = "col-md-6">
+      <a href = "#">A Textbook of  Automobile Engineering</a>
+      <br>
+      <small>by A. Chakrabarti and P. V. Gupta</small>
+      <br>
+      <mark class = "text-danger">Rs.135.00</mark>
+      <br>
+      <br>
+      <button type = "button" class = "btn btn-success btn-lg" data-toggle="collapse" data-target="#demo3">Show More...</button>
+      <div id="demo3" class="collapse">
+        The detailed description of the book is shown here..
+      </div>
+      <br>
+      <br>
+      <button type="button" class="btn btn-lg btn-primary">
+      <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+      </button>
+      <button  type="button" class="btn btn-lg btn-dark">
+      <span class="glyphicon glyphicon-tag">Buy Now</span>
+      </button>
+      <br>
+      <span class="badge badge-warning">20 </span><small> People have bought this book</small>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class = "col-md-2">
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="https://images-eu.ssl-images-amazon.com/images/I/41IxeBe2I9L._AC_US218_.jpg">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/41IxeBe2I9L._AC_US218_.jpg" alt="Lights">
+      </a>
+    </div>
+  </div>
+  <div class = "col-md-6">
+    <a href = "#">Manufacturing Science:Second Edition</a>
+    <br>
+    <small>by Amitabha Ghosh</small>
+    <br>
+    <mark class="text-danger">Rs.190.00</mark>
+    <br>
+    <br>
+    <button type = "button" class = "btn btn-success btn-lg" data-toggle="collapse" data-target="#demo4">Show More...</button>
+    <div id="demo4" class="collapse">
+      The detailed description of the book is shown here..
+    </div>
+    <br>
+    <br>
+    <button type="button" class="btn btn-lg btn-primary">
+    <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+    </button>
+    <button  type="button" class="btn btn-lg btn-dark">
+    <span class="glyphicon glyphicon-tag">Buy Now</span>
+    </button>
+    <br>
+    <span class="badge badge-warning">12 </span><small> People have bought this book</small>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class = "col-md-2">
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="https://images-eu.ssl-images-amazon.com/images/I/41f4BY7hwyL._AC_US218_.jpg">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/41f4BY7hwyL._AC_US218_.jpg" alt="Lights">
+      </a>
+    </div>
+  </div>
+  <div class = "col-md-6">
+    <a href = "#">Environmental Engineering</a>
+    <br>
+    <small>by Mayank Bhushan</small>
+    <br>
+    <mark class="text-danger">Rs.155.00</mark>
+    <br>
+    <br>
+    <button type = "button" class = "btn btn-success btn-lg" data-toggle="collapse" data-target="#demo5">Show More...</button>
+    <div id="demo5" class="collapse">
+      The detailed description of the book is shown here..
+    </div>
+    <br>
+    <br>
+    <button type="button" class="btn btn-lg btn-primary">
+    <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+    </button>
+    <button  type="button" class="btn btn-lg btn-dark">
+    <span class="glyphicon glyphicon-tag">Buy Now</span>
+    </button>
+    <br>
+    <span class="badge badge-warning">7 </span><small> People have bought this book</small>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class = "col-md-2">
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="https://images-eu.ssl-images-amazon.com/images/I/51j4ymC+1qL._AC_US218_.jpg">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/51j4ymC+1qL._AC_US218_.jpg" alt="Lights">
+      </a>
+    </div>
+  </div>
+  <div class = "col-md-6">
+      <a href = "#">Cyber Security:PRINCIPLES,THEORY AND PRACTICES</a>
+      <br>
+      <small>by Howard S. Peavy and Donald R. Rowe</small>
+      <br>
+      <mark class="text-danger">Rs.165.00</mark>
+      <br>
+      <br>
+      <button type = "button" class = "btn btn-success btn-lg" data-toggle="collapse" data-target="#demo6">Show More...</button>
+      <div id="demo6" class="collapse">
+        The detailed description of the book is shown here..
+      </div>
+      <br>
+      <br>
+      <button type="button" class="btn btn-lg btn-primary">
+      <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+      </button>
+      <button  type="button" class="btn btn-lg btn-dark">
+      <span class="glyphicon glyphicon-tag">Buy Now</span>
+      </button>
+      <br>
+      <span class="badge badge-warning">8 </span><small> People have bought this book</small>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class = "col-md-2">
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="https://images-eu.ssl-images-amazon.com/images/I/51UZ2u1DcSL._AC_US218_.jpg">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/51UZ2u1DcSL._AC_US218_.jpg" alt="Lights">
+      </a>
+    </div>
+  </div>
+  <div class = "col-md-6">
+      <a href = "#">A Handbook for Mechanical Engineering</a>
+      <br>
+      <small>by B.SINGH(EX.IES)</small>
+      <br>
+      <mark class="text-danger">Rs.100.00</mark>
+      <br>
+      <br>
+      <button type = "button" class = "btn btn-success btn-lg" data-toggle="collapse" data-target="#demo7">Show More...</button>
+      <div id="demo7" class="collapse">
+        The detailed description of the book is shown here..
+      </div>
+      <br>
+      <br>
+      <button type="button" class="btn btn-lg btn-primary">
+      <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+      </button>
+      <button  type="button" class="btn btn-lg btn-dark">
+      <span class="glyphicon glyphicon-tag">Buy Now</span>
+      </button>
+      <br>
+      <span class="badge badge-warning">25 </span><small> People have bought this book</small>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class = "col-md-2">
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="https://images-eu.ssl-images-amazon.com/images/I/513lMi9N1hL._AC_US218_.jpg">
+        <img src="https://images-eu.ssl-images-amazon.com/images/I/513lMi9N1hL._AC_US218_.jpg" alt="Lights">
+      </a>
+    </div>
+  </div>
+  <div class = "col-md-6">
+      <a href = "#">Objective Electrical, Electronic and Telecommunication Engineering</a>
+      <br>
+      <small>by B.L. Theraja,A.K.Theraja</small>
+      <br>
+      <mark class="text-danger">Rs.170.00</mark>
+      <br>
+      <br>
+      <button type = "button" class = "btn btn-success btn-lg" data-toggle="collapse" data-target="#demo8">Show More...</button>
+      <div id="demo8" class="collapse">
+        The detailed description of the book is shown here..
+      </div>
+      <br>
+      <br>
+      <button type="button" class="btn btn-lg btn-primary">
+      <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+      </button>
+      <button  type="button" class="btn btn-lg btn-dark">
+      <span class="glyphicon glyphicon-tag">Buy Now</span>
+      </button>
+      <br>
+      <span class="badge badge-warning">15 </span><small> People have bought this book</small>
+  </div>
+</div>
+<hr>
+
+
+<ul class="pagination justify-content-center">
+  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">4</a></li>
+  <li class="page-item"><a class="page-link" href="#">5</a></li>
+  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+
+<div class="row">
+  <div class="column">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Ebooks/2018-04/1109587_750x375_gps_cn_qifq_ShivKheraa._CB497521613_.jpg" alt="" style="width:100%;" >
+  </div>
+  <div class="column">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Ebooks/2018-04/1109607_750_gps_cn._CB1198675309_.jpg" alt="" style="width:100%;">
+  </div>
+  <div class="column">
+    <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img18/Ebooks/2018-02/KU/1088914_Content-Grid-Block-750x375._CB486749177_.jpg" alt="" style="width:100%;">
+  </div>
+</div>

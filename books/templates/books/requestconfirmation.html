@@ -1,0 +1,358 @@
+{% load i18n %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<style>
+.payment-success .row {
+    width:1200px;
+
+}
+.payment-success .column {
+    width:285px;
+    height:285px;
+    float: left;
+    margin-right:20px;
+  text-align: center;
+}
+.payment-success .last {
+    margin-right:0;
+}
+.payment-success .icon {
+  font-size:54px;
+  font-weight:bold;
+  color:#00b5b4;
+  padding: 10px 0;
+}
+.payment-success .title {
+  font-size:18px;
+  font-weight:bold;
+  color:#00b5b4;
+  padding: 10px 0;
+}
+.payment-success .description {
+  font-size:14px;
+  font-weight:bold;
+  color:#333;
+  padding: 10px 30px;
+  background: #ececec;
+  height: 80px;
+}
+
+body {
+  background-color: #ffffff;
+  font-family:  'Nanum Gothic' 'Roboto Slab' san-sarif;
+}
+
+.container {
+  /*background-color: pink;*/
+}
+
+table.logo td {
+  padding: 0;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto !important;
+}
+
+.confirmation {
+  background-color: #e1e1e1;
+}
+
+table.confirmation td {
+  padding: 0;
+}
+
+table.confirmation p {
+  text-transform: uppercase;
+  color: #464545;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+table.trackorder td {
+  padding: 0;
+}
+
+.trackorder p {
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  font-size: 1.1em;
+}
+
+table.trackorder-cta td {
+  padding: 0;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.trackorder-cta {
+  /*background-color: orange;*/
+}
+
+.customer-details {
+  padding: 0;
+}
+
+table.customer-details td {
+  background-color: #e1e1e1;
+}
+
+.btn-adonit {
+  background-color: #ffffff;
+  border: 1px solid #5c5c5c;
+  border-radius: 0px;
+  color: #5d5c5c;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  width: 300px;
+  -webkit-text-size-adjust: none;
+  mso-hide: all;
+  text-transform: uppercase;
+}
+
+.shipping-info {
+  text-transform: uppercase;
+  color: #464545;
+  background: none;
+  padding: 20px 40px ;
+  margin : 20px;
+}
+
+.shipping-info img{
+  float: right !important;
+  padding-right: 40px;
+}
+
+table.order-details td {
+  background-color: #ffffff;
+}
+
+table.cta-panels td {
+  padding: 0;
+}
+
+.order-info {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #464545;
+  background: none;
+  padding: 25px 50px !important;
+}
+
+.p-checkout {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  background: #b98893;
+  padding: 25px 50px !important;
+}
+
+.p-watch {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  background: #a8bdbb;
+  padding: 25px 50px !important;
+}
+
+.p-read {
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  background: #c3ac89;
+  padding: 25px 50px !important;
+}
+
+.social-icons {
+  background-color: #e1e1e1
+}
+
+table.social-icons img {
+  padding: 15px;
+}
+
+table.four {
+  width: 100%;
+}
+
+table.social-icons td {
+  padding: 0;
+}
+
+table.contact-info td {
+  padding-top:10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+contact-info p {
+  font-size: .8em;
+  text-align: center;
+  color: #464545;
+  text-transform: uppercase;
+}
+
+</style>
+
+
+<body>                    <!--Check it out!-->
+
+  <body>
+    <nav class="navbar navbar-inverse" role="navigation" style = "margin-bottom: 0px;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Name</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navbar-collapse in" id="bs-example-navbar-collapse-1" style="height: auto;">
+
+      <div class="col-sm-3 col-md-3">
+          <form class="navbar-form" role="search">
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="query" style = "box-sizing: border-box;width:300px;">
+              <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+          </div>
+          </form>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret" style="border-left-width: 5px;"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href="#">Notifications</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Return Books</a></li>
+            <li><a href="#">Customer care</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </li>
+        <button type="button" class="btn btn-default btn-sm" style = "margin-top: 10px;">
+          <span class="glyphicon glyphicon-"></span>Logout
+        </button>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+          <table class="container">
+            <tr>
+              <td class="row">
+                <table class="wrapper">
+                  <tr>
+                    <td>
+                      <img src="http://www.super-terrific.com/img/on-its-way.png" style ="width: 700px;height:300px;margin-left: 240px;padding-left: 20px;">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <br>
+<div class = "container">
+
+  <div class = "well-lg">
+    <hr>
+    <div class = "page-header">
+      <h1>Shipping Confirmation</h1>
+    </div>
+    <hr>
+  <table class="six columns">
+    <tr>
+  <td class="shipping-info" style = ";padding-top: 10px;padding-bottom: 10px;">
+      {% if id %}
+  <strong>Product:</strong> BOOK {{id}}<br>
+  <strong>Subtotal:</strong> Rs.150.00<br>
+  <strong>SHIPPING:</strong> FREE<br>
+  <br>
+  <strong>TOTAL:</strong>Rs.150<br>
+   {% endif %}
+    </td>
+    <td class="shipping-info">
+      {% if url %}
+    <img src="{{ url }}" style="height:130px;width:160px;">
+      {% endif %}
+    </td>
+
+      <td class="shipping-info" style = "padding-left: 400px;">
+      {% if user.address %}
+      <center>
+      <strong>SHIPPING ADDRESS:</strong><br>
+      <p>{{user.address}}</p>
+      <a href="#">Change shipping address <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-pencil"></span> Edit Profile
+        </button></a>
+      {% endif %}
+    </center>
+      </td>
+      </td>
+    </tr>
+  </table>
+<hr>
+</div>
+</div>
+
+<div class="payment-success">
+<div class="row">
+<div class="column">
+<div class="icon"><i class="fa fa-envelope"></i></div>
+<div class="title">1. Order Confirmation</div>
+<div class="description">You will receive an Order Confirmation email shortly. </div>
+</div>
+
+<div class="column">
+<div class="icon"><i class="fa fa-search"></i></i></div>
+<div class="title">2. Order Tracking</div>
+  <div class="description">Simply  check <a>Order History</a> under My Account. </div>
+</div>
+
+<div class="column">
+<div class="icon"><i class="fa fa-truck"></i></div>
+<div class="title">3. Delivery</div>
+<div class="description">Our delivery team will arrange delivery to your address within 3-14 working days. </div>
+</div>
+
+<div class="column last">
+<div class="icon"><i class="fa fa-comments"></i></div>
+<div class="title">4. Enquiry</div>
+<div class="description">If you have any queries, please contact our <a>Customer Service</a> We would be happy to assist you! </div>
+</div>
+</div>
+</div>
+</body>
