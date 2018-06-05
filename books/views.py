@@ -3,7 +3,6 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate
 from .forms import SignupForm,LoginForm
-from .filters import UserFilter
 from .models import User
 from django.shortcuts import get_object_or_404
 
