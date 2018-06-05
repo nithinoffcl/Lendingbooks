@@ -38,10 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books',
-    'bootstrap3',
-    'crispy_forms',
     'widget_tweaks',
-    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -142,10 +139,21 @@ WSGI_APPLICATION = 'LendingBooks.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+
+    DATABASES = {
+  'default': {
+      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+      'NAME': 'mydb',
+      'USER': 'nithin',
+      'PASSWORD':'kalainithin180698',
+      'HOST': 'localhost',
+      'PORT': '',
+  }
+}
 }
 
 
