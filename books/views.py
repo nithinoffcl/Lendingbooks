@@ -2,8 +2,9 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate
-from .forms import SignupForm,LoginForm
-from .models import User
+from .forms import SignupForm,LoginForm,InventoryForm
+from .filters import UserFilter,InventoryFilter
+from .models import User,Inventory
 from django.shortcuts import get_object_or_404
 
 urls1 = {
@@ -69,3 +70,9 @@ def login(request):
         login_form = LoginForm()
 
     return render(request,'books/login.html',{'form':login_form})
+
+def admin(request):
+    if request.method == 'GET':
+        users = User.objects.all()
+
+    return render(request,'books/adminpage.html',{'users':users})
