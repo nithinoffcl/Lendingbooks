@@ -18,3 +18,8 @@ class Order(models.Model):
 class Login(models.Model):
     email = models.EmailField(max_length=50)
     password = models.CharField(max_length=32)
+
+class Inventory(models.Model):
+    productid = models.AutoField(primary_key=True)
+    productname = models.CharField(max_length=100)
+    productquantity = models.IntegerField()
