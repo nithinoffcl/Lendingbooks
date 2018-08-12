@@ -1,5 +1,5 @@
 from django import forms
-from .models import User,Login
+from .models import User,Login,Inventory
 
 class SignupForm(forms.ModelForm):
     collegename = forms.CharField(label = "College Name")
@@ -52,5 +52,23 @@ class LoginForm(forms.ModelForm):
         result = User.objects.filter(email = emailid,password = password)
         if not result:
             raise forms.ValidationError("User not Registered or Invalid Credentials")
+
+        return data
+
+class InventoryForm(forms.ModelForm):
+    productname = forms.CharField(label = "Product Name")
+    productquantity = forms.CharField(label = "Number of Products")
+
+    class Meta:
+        model = Inventory
+        fields = ["productname","productquantity"]
+
+    def clean(self):
+        cleaned_data = super().clean()
+
+        data = self.cleaned_data
+
+        productname = self.cleaned_data.get('productname')
+        productquantity = self.cleaned_data.get('productquantity')
 
         return data
